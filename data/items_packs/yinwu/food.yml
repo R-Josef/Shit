@@ -1,0 +1,137 @@
+info:
+  namespace: yinwu
+recipes:
+  crafting_table:
+    shit:
+      permission: yinwu.shit
+      enabled: true
+      pattern:
+      - XDX
+      - DWD
+      - DWD
+      ingredients:
+        D: DIRT
+        W: WHEAT
+      result:
+        item: yinwu:shit
+        amount: 1
+    cone:
+      permission: yinwu.cone
+      enabled: true
+      pattern:
+      - DXD
+      - DXD
+      - XDX
+      ingredients:
+        D: itemsadder:dough
+      result:
+        item: yinwu:cone
+        amount: 1
+    shit_cone:
+      permission: yinwu.shit_cone
+      enabled: true
+      pattern:
+      - XXX
+      - XSX
+      - XCX
+      ingredients:
+        C: yinwu:cone
+        S: yinwu:shit
+      result:
+        item: yinwu:shit_cone
+        amount: 1
+    shit_cookie:
+      permission: yinwu.shit_cookie
+      enabled: true
+      pattern:
+      - XXX
+      - DSD
+      - XXX
+      ingredients:
+        D: itemsadder:dough
+        S: yinwu:shit
+      result:
+        item: yinwu:shit_cookie
+        amount: 1
+items:
+  shit:
+    display_name: '奥利给'
+    permission: shit
+    resource:
+      material: ROTTEN_FLESH
+      generate: true
+      textures:
+      - item/shit.png
+    events:
+      eat:
+        feed:
+          amount: 10
+        increment_player_stat:
+          name: thirst
+          amount: 10
+        drop_exp:
+          chance: 50
+          min_amount: 1
+          max_amount: 3
+        potion_effect:
+          type: CONFUSION
+          duration: 1200
+          amplifier: 1
+  cone:
+    display_name: '空甜筒'
+    permission: cone
+    resource:
+      material: DRIED_KELP
+      generate: true
+      textures:
+      - item/cone.png
+    events:
+      eat:
+        feed:
+          amount: 1
+  shit_cone:
+    display_name: '奥利给甜筒'
+    permission: shit_cone
+    resource:
+      material: ROTTEN_FLESH
+      generate: true
+      textures:
+      - item/shit_cone.png
+    events:
+      eat:
+        feed:
+          amount: 10
+        increment_player_stat:
+          name: thirst
+          amount: 10
+        drop_exp:
+          chance: 50
+          min_amount: 1
+          max_amount: 3
+        potion_effect:
+          type: CONFUSION
+          duration: 400
+          amplifier: 0
+  shit_cookie:
+    display_name: '奥利给曲奇'
+    permission: shit_cookie
+    resource:
+      material: ROTTEN_FLESH
+      generate: true
+      textures:
+      - item/shit_cookie.png
+    events:
+      eat:
+        feed:
+          amount: 5
+        increment_player_stat:
+          name: thirst
+          amount: 5
+        drop_exp:
+          chance: 25
+          min_amount: 1
+          max_amount: 3
+        potion_effect:
+          type: CONFUSION
+          duration: 600
+          amplifier: 1

@@ -1,0 +1,10 @@
+#累计减少多少饱食度就会拉一坨屎
+poopwhenfoodlost: 20
+
+#不会拉屎的人的白名单
+whitelist:
+- '0f2aa1aa-809a-49cf-8800-bb519a64a93f'
+
+#语言提示
+message:
+  poop: '§3§l你拉了一坨奥利给, 赶快捡起来吃掉吧!'
