@@ -1,0 +1,33 @@
+info:
+  namespace: yinwu
+recipes:
+  crafting_table:
+    toilet:
+      permission: yinwu.toilet
+      enabled: true
+      pattern:
+      - PXP
+      - IXI
+      - III
+      ingredients:
+        P: itemsadder:plastic_plate
+        I: itemsadder:iron_plate
+      result:
+        item: yinwu:toilet
+        amount: 1
+items:
+  toilet:
+    display_name: '马桶'
+    permission: toilet
+    lore:
+    - '&7用于排便'
+    - '&7Shift+右键点击马桶来打开马桶库存.'
+    resource:
+      material: OAK_WOOD
+      generate: false
+      model_path: item/toilet
+    behaviours:
+      furniture:
+        small_hitbox: true
+      furniture_sit:
+        sit_height: 0.75

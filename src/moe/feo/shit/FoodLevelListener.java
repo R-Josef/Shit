@@ -17,7 +17,7 @@ import org.bukkit.inventory.ItemStack;
 import dev.lone.itemsadder.api.ItemsAdder;
 
 public class FoodLevelListener implements Listener {
-	private Map<UUID, Integer> playerfoodlost = new HashMap<UUID, Integer>();
+	public Map<UUID, Integer> playerfoodlost = new HashMap<UUID, Integer>();
 	
 	@EventHandler
 	public void onFoodLevelChange(FoodLevelChangeEvent e){
@@ -43,7 +43,8 @@ public class FoodLevelListener implements Listener {
 			int levellostbefore = playerfoodlost.get(uuid);// 之前总共减少的饱食度
 			int levellostnow = levellostbefore + levellosting;// 目前总共减少的饱食度
 			int shitvalue = Shit.getInstance().getConfig().getInt("poopwhenfoodlost");// 减少多少饱食度拉一坨屎
-			while (levellostnow >= shitvalue) {
+			int shitsave = Shit.getInstance().getConfig().getInt("poopcansave");// 可以屯多少屎
+			while (levellostnow > shitvalue*shitsave) {// 当屎大于可以储存的极限时
 				World word = e.getEntity().getWorld();
 				Location location = e.getEntity().getLocation();
 				poop(word, location);//拉屎...
@@ -51,6 +52,9 @@ public class FoodLevelListener implements Listener {
 				levellostnow = levellostnow - shitvalue;
 			}
 			playerfoodlost.put(uuid, levellostnow);
+			if (levellostnow > shitvalue * (shitsave - 1)) {// 如果还差一坨就要憋不住了
+				player.sendMessage(Shit.getInstance().getConfig().getString("message.cantkeep"));
+			}
 		}
 	}
 	
