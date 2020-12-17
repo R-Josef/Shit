@@ -1,9 +1,20 @@
 #马桶背包的标题
 toiletname: '马桶'
 
-#语言提示
+#游戏提示
 message:
   cantkeep: '§3§l你的肚子咕咕作响, 就快要憋不住奥利给了, 赶紧找个马桶解决一下吧!'
   poop: '§3§l你在地上拉了一坨奥利给, 赶快捡起来吃掉吧!'
   poopontoilet: '§3§l你往马桶里拉了%NUM%坨奥利给, 全部掏出来吃掉吧!'
   nopoopontoilet: '§3§l很遗憾, 你暂时没有奥利给, 消耗一点饱食度再来吧!'
+
+#命令提示
+command:
+  prefix: '§e[§dShit§e]'
+  invalid: '§4命令错误!'
+  nopermission: '§4你没有权限这样做!'
+  reloaded: '§a配置文件已重载!'
+  help:
+    title: '§3§lShit指令帮助'
+    help: '§3显示帮助信息: §b/shit help'
+    reload: '§3重载插件: §b/shit reload'

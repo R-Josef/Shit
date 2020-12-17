@@ -17,6 +17,9 @@ public class Shit extends JavaPlugin {
 		Config.load();
 		Language.saveDefaultConfig();
 		Language.load(Config.LANG.getString());
+		ShitCommandExecutor cmdexecutor = new ShitCommandExecutor();
+		this.getCommand("shit").setExecutor(cmdexecutor);
+		this.getCommand("shit").setTabCompleter(cmdexecutor);
 		getServer().getPluginManager().registerEvents(foodlevellistener = new FoodLevelListener(), this);
 		getServer().getPluginManager().registerEvents(new ToiletClickListener(), this);
 		getServer().getPluginManager().registerEvents(toiletmanager = new ToiletManager(), this);

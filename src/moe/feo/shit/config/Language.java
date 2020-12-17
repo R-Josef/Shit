@@ -17,16 +17,20 @@ import moe.feo.shit.Shit;
 public enum Language {
 
 	TOILETNAME("toiletname"), MESSAGE_CANTKEEP("message.cantkeep"), MESSAGE_POOP("message.poop"),
-	MESSAGE_POOPONTOILET("message.poopontoilet"), MESSAGE_NOPOOPONTOILET("message.nopoopontoilet");
+	MESSAGE_POOPONTOILET("message.poopontoilet"), MESSAGE_NOPOOPONTOILET("message.nopoopontoilet"),
+	COMMAND_PREFIX("command.prefix"), COMMAND_INVALID("command.invalid"), COMMAND_NOPERMISSION("command.nopermission"),
+	COMMAND_RELOADED("command.reloaded"), COMMAND_HELP_TITLE("command.help.title"),
+	COMMAND_HELP_HELP("command.help.help"), COMMAND_HELP_RELOAD("command.help.reload");
 
 	private static File file;
 	private static FileConfiguration config;
 	private static List<String> languages;
 	private String path;
-	
+
 	static {
 		languages = new ArrayList<String>();
 		languages.add("zh_CN");
+		languages.add("en_US");
 	}
 
 	Language(String path) {

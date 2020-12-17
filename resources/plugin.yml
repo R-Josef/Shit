@@ -3,3 +3,13 @@ main: moe.feo.shit.Shit
 version: 1.0
 author: Fengshuai(R_Josef)
 depend: [ItemsAdder]
+commands:
+  shit:
+    description: 'Main command of Shit.'
+    usage: |
+      /shit help - Get help info
+      /shit reload - Reload config
+permissions:
+  shit.reload:
+    description: 'Reload config'
+    default: 'op'
