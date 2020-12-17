@@ -14,6 +14,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
+import moe.feo.shit.config.Language;
+
 public class Toilet {
 	
 	private UUID uuid;
@@ -28,7 +30,7 @@ public class Toilet {
 		this.uuid = uuid;
 		this.entity = entity;
 		container = entity.getPersistentDataContainer();// 从实体中得到容器
-		inv = Bukkit.createInventory(new TolietInventoryHolder(), InventoryType.HOPPER, Shit.getInstance().getConfig().getString("toiletname"));// 创建一个库存
+		inv = Bukkit.createInventory(new TolietInventoryHolder(), InventoryType.HOPPER, Language.TOILETNAME.getString());// 创建一个库存
 		restoreInventory();
 	}
 

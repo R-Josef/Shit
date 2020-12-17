@@ -1,0 +1,9 @@
+#Title of toilet inventory
+toiletname: 'Toilet'
+
+#Just message
+message:
+  cantkeep: '§3§lYour belly is gurgling, and you can''t hold back your shit, so quickly find a toilet to solve it.!'
+  poop: '§3§lYou pulled a pile of shit on the ground, pick it up and eat it!'
+  poopontoilet: '§3§lYou pulled %NUM% pile of shit(s) into toilet, take them out and eat them all!'
+  nopoopontoilet: '§3§lSorry, but you don''t have any shit at this moment, consume some food level and come again!'

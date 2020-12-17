@@ -12,6 +12,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.inventory.ItemStack;
 
 import dev.lone.itemsadder.api.ItemsAdder;
+import moe.feo.shit.config.Config;
 
 public class ToiletBreakListener implements Listener {
 
@@ -22,7 +23,7 @@ public class ToiletBreakListener implements Listener {
 			ArmorStand armorstand = (ArmorStand) e.getEntity();
 			if (ItemsAdder.isFurniture(e.getEntity())) {// 是不是家具
 				String customname = ItemsAdder.getCustomItemName(armorstand.getEquipment().getHelmet());
-				if (customname.equals("yinwu:toilet")) {// 是不是马桶
+				if (customname.equals(Config.TOILETID.getString())) {// 是不是马桶
 					if (e.getDamage() == 0) {
 						UUID uuid = entity.getUniqueId();
 						Toilet toilet = ToiletManager.activetoilets.get(uuid);// 尝试从活动列表获取一个马桶

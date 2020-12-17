@@ -1,5 +1,5 @@
 name: Shit
 main: moe.feo.shit.Shit
-version: 0.2.2
+version: 1.0
 author: Fengshuai(R_Josef)
 depend: [ItemsAdder]

@@ -11,6 +11,8 @@ import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import dev.lone.itemsadder.api.ItemsAdder;
+import moe.feo.shit.config.Config;
+import moe.feo.shit.config.Language;
 
 public class ToiletClickListener implements Listener {
 	
@@ -22,7 +24,7 @@ public class ToiletClickListener implements Listener {
 			ItemStack item = armorstand.getEquipment().getHelmet();
 			String itemname = ItemsAdder.getCustomItemName(item);
 			Player player = e.getPlayer();
-			if (itemname.equals("yinwu:toilet")) {// 判断是否为马桶
+			if (itemname.equals(Config.TOILETID.getString())) {// 判断是否为马桶
 				boolean open = player.isSneaking();// 如果是shit右键则是打开马桶
 				UUID uuid = entity.getUniqueId();
 				Toilet toilet = ToiletManager.activetoilets.get(uuid);// 尝试从活动列表获取一个马桶
@@ -38,7 +40,7 @@ public class ToiletClickListener implements Listener {
 						Shit.foodlevellistener.playerfoodlost.put(player.getUniqueId(), 0);
 					}
 					int levellostnow = Shit.foodlevellistener.playerfoodlost.get(player.getUniqueId());// 饱食度减少的值
-					int shitvalue = Shit.getInstance().getConfig().getInt("poopwhenfoodlost");// 减少多少饱食度拉一坨屎
+					int shitvalue = Config.POOPWHENFOODLOST.getInt();// 减少多少饱食度拉一坨屎
 					int count = 0;
 					while (levellostnow >= shitvalue) {// 坐在马桶上就能把屎全部拉出来
 						// 这里对库存进行操作，但是没有view的entity
@@ -50,9 +52,9 @@ public class ToiletClickListener implements Listener {
 					}
 					Shit.foodlevellistener.playerfoodlost.put(player.getUniqueId(), levellostnow);
 					if (count > 0) {
-						player.sendMessage(Shit.getInstance().getConfig().getString("message.poopontoilet").replaceAll("%NUM%", String.valueOf(count)));
+						player.sendMessage(Language.MESSAGE_POOPONTOILET.getString().replaceAll("%NUM%", String.valueOf(count)));
 					} else {
-						player.sendMessage(Shit.getInstance().getConfig().getString("message.nopoopontoilet"));
+						player.sendMessage(Language.MESSAGE_NOPOOPONTOILET.getString());
 					}
 					
 					if (toilet.getInventory().getViewers().size() <= 0) {// 没有玩家正在查看马桶了
@@ -67,7 +69,7 @@ public class ToiletClickListener implements Listener {
 	}
 	
 	public void poop(Inventory inv) {
-		ItemStack shit = ItemsAdder.getCustomItem("yinwu:shit");
+		ItemStack shit = ItemsAdder.getCustomItem(Config.SHITID.getString());
 		inv.addItem(shit);
 	}
 

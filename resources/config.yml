@@ -1,18 +1,26 @@
+#语言设置
+#Language setting
+lang: en_US
+
 #累计减少多少饱食度就会屯一坨屎
+#Decide how many food levels when a player lost, a shit will stored in this player's belly
 poopwhenfoodlost: 20
 
 #累计屯了几坨屎就会憋不住
+#Decide how many shit can store in player's belly
 poopcansave: 4
 
 #不会拉屎的人的白名单
+#White list of people who can not shit
 whitelist:
 - '0f2aa1aa-809a-49cf-8800-bb519a64a93f'
 
-toiletname: '马桶'
+#马桶的完整自定义ID (用于判断是否为马桶, 建议不要修改)
+#The complete custom ID of the toilet
+#(Used to determine whether it is a toilet, it is not recommended to modify)
+toiletid: 'shit:toilet'
 
-#语言提示
-message:
-  cantkeep: '§3§l你的肚子咕咕作响, 就快要憋不住奥利给了, 赶紧找个马桶解决一下吧!'
-  poop: '§3§l你在地上拉了一坨奥利给, 赶快捡起来吃掉吧!'
-  poopontoilet: '§3§l你往马桶里拉了%NUM%坨奥利给, 全部掏出来吃掉吧!'
-  nopoopontoilet: '§3§l很遗憾, 你暂时没有奥利给, 消耗一点饱食度再来吧!'
+#屎的完整自定义ID (用于生成屎, 建议不要修改)
+#The complete custom ID of the shit
+#(Used to generate shit, it is not recommended to modify)
+shitid: 'shit:shit'
