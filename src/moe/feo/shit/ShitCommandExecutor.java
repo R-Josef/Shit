@@ -6,7 +6,6 @@ import java.util.List;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
-
 import moe.feo.shit.config.Config;
 import moe.feo.shit.config.Language;
 
@@ -20,6 +19,9 @@ public class ShitCommandExecutor implements TabExecutor {
 			if ("reload".startsWith(arg)) {
 				list.add("reload");
 			}
+			if ("help".startsWith(arg)) {
+				list.add("help");
+			}
 			return list;
 		}
 		return null;
@@ -27,6 +29,11 @@ public class ShitCommandExecutor implements TabExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		if (args.length == 0) {// 没有带参数
+			String[] helpargs = { "help" };
+			onCommand(sender, cmd, label, helpargs);
+			return true;
+		}
 		switch (args[0].toLowerCase()) {
 		case "help": {
 			sender.sendMessage(Language.COMMAND_PREFIX.getString() + Language.COMMAND_HELP_TITLE.getString());
