@@ -1,9 +1,9 @@
 info:
-  namespace: yinwu
+  namespace: shit
 recipes:
   crafting_table:
     shit:
-      permission: yinwu.shit
+      permission: shit.shit
       enabled: true
       pattern:
       - XDX
@@ -13,10 +13,10 @@ recipes:
         D: DIRT
         W: WHEAT
       result:
-        item: yinwu:shit
+        item: shit:shit
         amount: 1
     cone:
-      permission: yinwu.cone
+      permission: shit.cone
       enabled: true
       pattern:
       - DXD
@@ -25,23 +25,23 @@ recipes:
       ingredients:
         D: itemsadder:dough
       result:
-        item: yinwu:cone
+        item: shit:cone
         amount: 1
     shit_cone:
-      permission: yinwu.shit_cone
+      permission: shit.shit_cone
       enabled: true
       pattern:
       - XXX
       - XSX
       - XCX
       ingredients:
-        C: yinwu:cone
-        S: yinwu:shit
+        C: shit:cone
+        S: shit:shit
       result:
-        item: yinwu:shit_cone
+        item: shit:shit_cone
         amount: 1
     shit_cookie:
-      permission: yinwu.shit_cookie
+      permission: shit.shit_cookie
       enabled: true
       pattern:
       - XXX
@@ -49,13 +49,13 @@ recipes:
       - XXX
       ingredients:
         D: itemsadder:dough
-        S: yinwu:shit
+        S: shit:shit
       result:
-        item: yinwu:shit_cookie
+        item: shit:shit_cookie
         amount: 1
 items:
   shit:
-    display_name: '奥利给'
+    display_name: display-name-shit
     permission: shit
     resource:
       material: ROTTEN_FLESH
@@ -78,7 +78,7 @@ items:
           duration: 1200
           amplifier: 1
   cone:
-    display_name: '空甜筒'
+    display_name: display-name-cone
     permission: cone
     resource:
       material: DRIED_KELP
@@ -90,7 +90,7 @@ items:
         feed:
           amount: 1
   shit_cone:
-    display_name: '奥利给甜筒'
+    display_name: display-name-shit_cone
     permission: shit_cone
     resource:
       material: ROTTEN_FLESH
@@ -113,7 +113,7 @@ items:
           duration: 400
           amplifier: 0
   shit_cookie:
-    display_name: '奥利给曲奇'
+    display_name: display-name-shit_cookie
     permission: shit_cookie
     resource:
       material: ROTTEN_FLESH

@@ -1,0 +1,22 @@
+info:
+  namespace: shit
+categories:
+  furnitures:
+    enabled: true
+    skip_if_already: false
+    icon: itemsadder:old_clock
+    name: display-category-furnitures
+    permission: ia.menu.furnitures
+    items:
+      - "shit:toilet"
+  eatables:
+    enabled: true
+    skip_if_already: false
+    icon: itemsadder:pizza
+    name: display-category-eatables
+    permission: ia.menu.eatables
+    items:
+      - "shit:shit"
+      - "shit:cone"
+      - "shit:shit_cone"
+      - "shit:shit_cookie"

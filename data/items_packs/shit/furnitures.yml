@@ -1,9 +1,9 @@
 info:
-  namespace: yinwu
+  namespace: shit
 recipes:
   crafting_table:
     toilet:
-      permission: yinwu.toilet
+      permission: shit.toilet
       enabled: true
       pattern:
       - PXP
@@ -13,11 +13,11 @@ recipes:
         P: itemsadder:plastic_plate
         I: itemsadder:iron_plate
       result:
-        item: yinwu:toilet
+        item: shit:toilet
         amount: 1
 items:
   toilet:
-    display_name: '马桶'
+    display_name: display-name-toilet
     permission: toilet
     lore:
     - '&7用于排便'

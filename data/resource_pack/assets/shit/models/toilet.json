@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"7": "yinwu:item/toilet/water",
-		"8": "yinwu:item/toilet/grey",
-		"9": "yinwu:item/toilet/white",
-		"10": "yinwu:item/toilet/black"
+		"7": "shit:item/toilet/water",
+		"8": "shit:item/toilet/grey",
+		"9": "shit:item/toilet/white",
+		"10": "shit:item/toilet/black"
 	},
 	"elements": [
 		{
