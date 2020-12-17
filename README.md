@@ -55,5 +55,8 @@ toiletid: 'shit:toilet'
 #The complete custom ID of the shit
 #(Used to generate shit, it is not recommended to modify)
 shitid: 'shit:shit'
-
 ```
+
+## About Toilet
+
+The Toilet model was not create by me, it comes from [MrCrayfishFurnitureMod](https://github.com/MrCrayfish/MrCrayfishFurnitureMod) which is [GNU General Public License](https://github.com/MrCrayfish/MrCrayfishFurnitureMod/blob/1.15.X/LICENSE), the author is [MrCrayfish](https://github.com/MrCrayfish). It was modified by Asterism on this basis to adapt to the vanilla Minecraft client.
