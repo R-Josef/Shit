@@ -7,3 +7,5 @@ dictionary:
   display-name-shit_cone: 奥利给甜筒
   display-name-shit_cookie: 奥利给曲奇
   display-name-toilet: 马桶
+  lore-1-toilet: '&7用于排便'
+  lore-2-toilet: '&7Shift+右键点击马桶来打开马桶库存.'

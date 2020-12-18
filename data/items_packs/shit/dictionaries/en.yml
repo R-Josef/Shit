@@ -1,9 +1,11 @@
 info:
   namespace: shit
-  dictionary-lang: "zh"
+  dictionary-lang: "en"
 dictionary:
   display-name-shit: Shit
   display-name-cone: Cone
   display-name-shit_cone: Shit cone
   display-name-shit_cookie: Shit cookie
   display-name-toilet: Toilet
+  lore-1-toilet: '&7For defecation'
+  lore-2-toilet: '&7Shift + right click on the toilet to open the toilet inventory.'
