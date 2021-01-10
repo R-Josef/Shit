@@ -2,11 +2,13 @@ package moe.feo.shit;
 
 import java.util.UUID;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.inventory.ItemStack;
@@ -16,8 +18,12 @@ import moe.feo.shit.config.Config;
 
 public class ToiletBreakListener implements Listener {
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.LOWEST)
 	public void onTest(EntityDamageEvent e) {
+		// 如果事件已经被取消就直接返回，以免出现刷物品Bug
+		if (e.isCancelled()) {
+			return;
+		}
 		Entity entity = e.getEntity();
 		if (e.getEntity() instanceof ArmorStand) {// 是不是盔甲架
 			ArmorStand armorstand = (ArmorStand) e.getEntity();
