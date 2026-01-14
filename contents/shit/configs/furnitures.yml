@@ -23,9 +23,9 @@ items:
     - lore-1-toilet
     - lore-2-toilet
     resource:
-      material: OAK_WOOD
+      material: QUARTZ_STAIR
       generate: false
-      model_path: item/toilet
+      model_path: block/toilet
     behaviours:
       furniture:
         small_hitbox: true
